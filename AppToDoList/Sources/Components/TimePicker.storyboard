@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Time Picker View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="TimePickerViewController" modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="TimePickerViewController" customModule="AppToDoList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="75C-8a-nbI">
+                                <rect key="frame" x="0.0" y="613" width="393" height="312"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZG-G4-mcZ">
+                                        <rect key="frame" x="328" y="19" width="50" height="35"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="OK">
+                                            <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="17"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="close:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="TY8-WI-Dpt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRS-sV-T24">
+                                        <rect key="frame" x="8" y="19" width="121" height="35"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="CANCELAR">
+                                            <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="17"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="close:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="QrP-01-RYF"/>
+                                        </connections>
+                                    </button>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="mUV-r1-27A">
+                                        <rect key="frame" x="34" y="54" width="320" height="216"/>
+                                        <locale key="locale" localeIdentifier="pt_BR"/>
+                                    </datePicker>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="mUV-r1-27A" firstAttribute="top" secondItem="aZG-G4-mcZ" secondAttribute="bottom" id="AW4-7H-yhL"/>
+                                    <constraint firstItem="mRS-sV-T24" firstAttribute="top" secondItem="75C-8a-nbI" secondAttribute="top" constant="19" id="Bte-Rc-EWj"/>
+                                    <constraint firstItem="mUV-r1-27A" firstAttribute="leading" secondItem="75C-8a-nbI" secondAttribute="leading" constant="34" id="WkH-TL-sz0"/>
+                                    <constraint firstItem="aZG-G4-mcZ" firstAttribute="top" secondItem="75C-8a-nbI" secondAttribute="top" constant="19" id="dP7-Xt-qWN"/>
+                                    <constraint firstAttribute="trailing" secondItem="aZG-G4-mcZ" secondAttribute="trailing" constant="15" id="kdx-O1-WgV"/>
+                                    <constraint firstAttribute="bottom" secondItem="mUV-r1-27A" secondAttribute="bottom" constant="42" id="ojD-mc-m8w"/>
+                                    <constraint firstAttribute="trailing" secondItem="mUV-r1-27A" secondAttribute="trailing" constant="39" id="sjQ-NR-Pr8"/>
+                                    <constraint firstItem="mRS-sV-T24" firstAttribute="leading" secondItem="75C-8a-nbI" secondAttribute="leading" constant="8" id="u1O-Hg-ax2"/>
+                                    <constraint firstItem="mUV-r1-27A" firstAttribute="top" secondItem="mRS-sV-T24" secondAttribute="bottom" id="yUn-vO-vx7"/>
+                                    <constraint firstItem="aZG-G4-mcZ" firstAttribute="leading" secondItem="mRS-sV-T24" secondAttribute="trailing" constant="199" id="zcz-mq-FSs"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="75C-8a-nbI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="554" id="4B1-6P-Ec0"/>
+                            <constraint firstItem="75C-8a-nbI" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="odG-Zd-Nsd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bntCancelar" destination="mRS-sV-T24" id="cJb-Gv-WU3"/>
+                        <outlet property="btnOK" destination="aZG-G4-mcZ" id="6IY-RY-ERd"/>
+                        <outlet property="datePicker" destination="mUV-r1-27A" id="LKW-Hf-qpF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
