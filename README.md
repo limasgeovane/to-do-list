@@ -1,4 +1,4 @@
 
 # ToDo List
 
-Aplicado em Swift para criação de uma lista de tarefas
+Aplicativo em Swift para criação de uma lista de tarefas
